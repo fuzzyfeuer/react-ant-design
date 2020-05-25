@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "baseUrl": ".",
+        "declaration": true,
+        "jsx": "react",
+        "module": "es6",
+        "moduleResolution": "node",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": false,   // eslint
+        "noImplicitThis": true,
+        "noUnusedLocals": false,      // eslint
+        "noUnusedParameters": false,
+        "outDir": "./dist",
+        "resolveJsonModule": true,
+        "paths": {
+            "*": ["src/*"],
+            "src/*": ["src/*"],
+            "tests/*": ["tests/*"]
+        },
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "target": "es5"
+    },
+    "typedocOptions": {
+        "mode": "library",
+        "out": "dist/docs"
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

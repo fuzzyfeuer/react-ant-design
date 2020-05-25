@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #ffffff;
+
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+    width: 100%;
+}
+
+#app-container {
+    /* So that don't need to subtract padding from 100% width/height. */
+    box-sizing: border-box;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}

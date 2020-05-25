@@ -1,0 +1,60 @@
+
+.app .feature-panel .ant-tabs {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.app .feature-panel .ant-slider-handle.ant-tooltip-open,
+.app .feature-panel .ant-slider-handle:not(.ant-tooltip-open),
+.app .feature-panel .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+    border-color: #1890ff;
+}
+
+.app .feature-panel .ant-slider .ant-slider-track {
+    background-color: #69c0ff;
+}
+
+.app .feature-panel .ant-slider .ant-slider-rail {
+    background-color: #e1e1e1;
+}
+
+/**
+ * Tabs
+ * https://stackoverflow.com/questions/47118124/how-to-evenly-space-tabs-across-the-whole-tab-bar
+ */
+.app .feature-panel .ant-tabs-nav {
+    display: flex;
+}
+
+.app .feature-panel .ant-tabs-nav > div:nth-child(1) {
+    display: flex;
+    width: 100%;
+}
+
+.app .feature-panel .ant-tabs-nav .ant-tabs-tab {
+    flex-grow: 1;
+    margin-right: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+/*
+.app .feature-panel .ant-tabs {
+    &-nav {
+        display: flex;
+        .ant-tabs-tab {
+            flex-grow: 1;
+            margin-right: 0px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+*/
+
+.app .feature-panel .ant-picker {
+    border: 1.5px solid #b0b0b0;
+}
+
+.app .feature-panel .ant-picker-suffix {
+    color: rgba(0, 0, 0, 0.4);
+}
