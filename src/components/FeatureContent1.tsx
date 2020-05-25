@@ -2,9 +2,13 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { Moment } from 'moment';
-import { Button, DatePicker, Slider, Space, Switch } from 'antd';
+import { Button, DatePicker, Radio, Slider, Space, Switch } from 'antd';
+
+//import type { RadioChangeEvent } from 'antd';
 
 import { StyledProps } from 'components/common/CommonProps';
+
+const { useState } = React;
 
 type Props = {
 }
@@ -15,6 +19,7 @@ type Props = {
  */
 const FeatureContent1: React.FunctionComponent<Props> = (props: Props) => {
     console.info('FeatureContent1 | render}');
+    const [value, setValue] = useState<number>(0);
 
     const onChange = (activeKey: string): void => {
         console.info(`onChange ${activeKey}`);
@@ -28,6 +33,20 @@ const FeatureContent1: React.FunctionComponent<Props> = (props: Props) => {
 
     const onChangeDate = (date: Moment | null, dateString: string): void => {
         console.info(`onChangeDate ${dateString}`);
+    };
+
+    const onRadioChange = (event: { target: { value?: any }}): void => {
+        if (event && event.target && typeof event.target.value === 'number') {
+            // @ts-ignore
+            console.info(`onRadioChange ${event.target.value}`);
+            setValue(event.target.value);
+        }
+    };
+
+    const radioStyle = {
+        display: 'block',
+        height: '30px',
+        lineHeight: '30px',
     };
 
     return (
@@ -59,6 +78,18 @@ const FeatureContent1: React.FunctionComponent<Props> = (props: Props) => {
                 From Date:
                 <DatePicker onChange={onChangeDate} />
             </Space>
+
+            <Radio.Group onChange={onRadioChange} value={value}>
+                <Radio style={radioStyle} value={1}>
+                    Option A
+                </Radio>
+                <Radio style={radioStyle} value={2}>
+                    Option B
+                </Radio>
+                <Radio style={radioStyle} value={3}>
+                    Option C
+                </Radio>
+            </Radio.Group>
         </div>
     );
 };
